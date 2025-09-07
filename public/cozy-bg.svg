@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <rect width="240" height="240" fill="#fff7f8"/>
+  <g opacity="0.22" stroke="#6b4a3b" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Coffee mug -->
+    <path d="M46 68h64v36a12 12 0 0 1-12 12H58a12 12 0 0 1-12-12V68z"/>
+    <path d="M110 74h14a14 14 0 0 1 0 28h-10"/>
+    <path d="M66 58c0-8 10-8 10-16"/>
+    <path d="M86 58c0-8 10-8 10-16"/>
+
+    <!-- Croissant -->
+    <path d="M178 56c18 0 34 14 36 32-28 6-44-8-72-2 4-18 18-30 36-30z"/>
+    <path d="M148 88c16-8 46-8 64 0"/>
+
+    <!-- Notebook -->
+    <rect x="32" y="142" width="92" height="64" rx="4"/>
+    <line x1="44" y1="154" x2="112" y2="154"/>
+    <line x1="44" y1="170" x2="112" y2="170"/>
+    <line x1="44" y1="186" x2="112" y2="186"/>
+
+    <!-- Cat paw -->
+    <circle cx="180" cy="166" r="14"/>
+    <circle cx="203" cy="152" r="5"/>
+    <circle cx="194" cy="144" r="5"/>
+    <circle cx="168" cy="146" r="5"/>
+    <circle cx="160" cy="156" r="5"/>
+  </g>
+</svg>

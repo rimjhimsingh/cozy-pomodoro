@@ -1,0 +1,100 @@
+#root {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.phase-switcher {
+  display: flex;
+  gap: 0.5rem;
+}
+.phase-switcher button {
+  padding: 0.6rem 0.8rem;
+  background: var(--accent-mint);
+  border-color: #6b4a3b;
+  color: #3a2a28;
+}
+.phase-switcher .active {
+  box-shadow: 0 0 0 2px var(--accent-rose) inset, 2px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.presets {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.preset {
+  background: var(--primary);
+  color: #3a2a28;
+}
+.preset.selected {
+  box-shadow: 0 0 0 2px #6b4a3b inset;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.clock {
+  width: 280px;
+  height: 280px;
+  border-radius: 18px; /* rounded edges */
+  padding: 1.25rem; /* inner padding */
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #3a2a28;
+  border: 2px solid #6b4a3b;
+  background: linear-gradient(180deg, #fffdfa, #ffecef);
+  box-shadow: 0 8px 24px rgba(107, 74, 59, 0.15),
+    inset 0 0 0 4px rgba(255, 255, 255, 0.6);
+}
+.clock span {
+  font-family: "Press Start 2P", system-ui, sans-serif;
+}
+.clock.work {
+  background: linear-gradient(180deg, #fff8f0, #ffe2c9);
+}
+.clock.break {
+  background: linear-gradient(180deg, #fff5f8, #ffdbe6);
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+.controls button {
+  min-width: 140px;
+}
+
+.rounds {
+  font-size: 1.15rem;
+  opacity: 1;
+  color: #fffdf8;
+}
+
+.footer {
+  opacity: 1;
+  font-size: 1.05rem;
+  color: #fffdf8;
+}
