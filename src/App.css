@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .app {
@@ -10,6 +12,7 @@
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
+  width: 100%;
 }
 
 .header {
@@ -17,17 +20,21 @@
   flex-direction: column;
   gap: 0.75rem;
   align-items: center;
+  width: 100%;
 }
 
 .phase-switcher {
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .phase-switcher button {
   padding: 0.6rem 0.8rem;
   background: var(--accent-mint);
   border-color: #6b4a3b;
   color: #3a2a28;
+  min-width: 100px;
 }
 .phase-switcher .active {
   box-shadow: 0 0 0 2px var(--accent-rose) inset, 2px 2px 0 rgba(0, 0, 0, 0.12);
@@ -37,10 +44,12 @@
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .preset {
   background: var(--primary);
   color: #3a2a28;
+  min-width: 80px;
 }
 .preset.selected {
   box-shadow: 0 0 0 2px #6b4a3b inset;
@@ -51,6 +60,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .clock {
@@ -82,19 +92,157 @@
 .controls {
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .controls button {
   min-width: 140px;
+  flex: 1;
+  max-width: 200px;
 }
 
 .rounds {
   font-size: 1.15rem;
   opacity: 1;
   color: #fffdf8;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .footer {
   opacity: 1;
   font-size: 1.05rem;
   color: #fffdf8;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Responsive adjustments for App.css */
+@media (max-width: 480px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .app {
+    gap: 1rem;
+  }
+
+  .header {
+    gap: 0.5rem;
+  }
+
+  .phase-switcher {
+    gap: 0.25rem;
+  }
+
+  .phase-switcher button {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.8rem;
+    min-width: 80px;
+  }
+
+  .presets {
+    gap: 0.25rem;
+  }
+
+  .preset {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.8rem;
+    min-width: 70px;
+  }
+
+  .clock {
+    width: 240px;
+    height: 240px;
+    font-size: 2.2rem;
+    padding: 1rem;
+  }
+
+  .controls {
+    gap: 0.25rem;
+  }
+
+  .controls button {
+    min-width: 100px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .rounds {
+    font-size: 0.85rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .clock {
+    width: 260px;
+    height: 260px;
+    font-size: 2.6rem;
+  }
+
+  .controls button {
+    min-width: 120px;
+  }
+}
+
+@media (min-width: 768px) {
+  .clock {
+    width: 300px;
+    height: 300px;
+    font-size: 3.2rem;
+  }
+
+  .controls button {
+    min-width: 160px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .clock {
+    width: 320px;
+    height: 320px;
+    font-size: 3.5rem;
+  }
+
+  .controls button {
+    min-width: 180px;
+  }
+}
+
+/* Landscape phone adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  #root {
+    padding: 0.5rem;
+  }
+
+  .app {
+    gap: 0.5rem;
+  }
+
+  .clock {
+    width: 200px;
+    height: 200px;
+    font-size: 2rem;
+    padding: 0.75rem;
+  }
+
+  .header {
+    gap: 0.25rem;
+  }
+
+  .phase-switcher button,
+  .preset {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .controls button {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.7rem;
+    min-width: 80px;
+  }
 }

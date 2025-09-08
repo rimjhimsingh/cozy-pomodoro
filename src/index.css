@@ -90,8 +90,76 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-@media (max-width: 420px) {
+/* Mobile-first responsive breakpoints */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+
+  button {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+    min-height: 44px; /* touch target */
+  }
+
+  body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
   h1 {
     font-size: 1.4rem;
+  }
+
+  button {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  button {
+    padding: 0.9rem 1.3rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  button {
+    padding: 1rem 1.4rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  button {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem;
   }
 }
