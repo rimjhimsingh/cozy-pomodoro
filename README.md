@@ -1,12 +1,46 @@
-# React + Vite
+# Cozy Pomodoro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cozy, coffee shop–themed Pomodoro timer with pixel‑art vibes. Choose a focus/break preset, press Start, and stay in the flow with soft ambient music and gentle session chimes.
 
-Currently, two official plugins are available:
+## How it works
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Select a preset under the title:
+  - 50 minutes Work → 10 minutes Break
+  - 25 minutes Work → 5 minutes Break
+  - 90 minutes Work → 20 minutes Break
+- Click Start. The timer begins counting down.
+- When a session ends, you’ll hear a chime and the phase toggles automatically (Work ↔ Break).
 
-## Expanding the ESLint configuration
+## Controls
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Start/Pause: toggles the timer and music
+- Reset: stops the timer, rewinds the clock and music
+- Take a break: immediately switch Work ↔ Break
+
+Keyboard ideas (optional to implement later):
+
+- Space: Start/Pause
+- R: Reset
+- S: Take a break
+- 1/2/3: Choose preset (50/10, 25/5, 90/20)
+
+## How it looks
+
+![Home](public/screenshots/home.png)
+
+## Project structure
+
+```
+cozy-pomodoro/
+  public/
+  src/
+    assets/
+    App.jsx
+    App.css
+    index.css
+    main.jsx
+```
+
+## License
+
+MIT © 2025 Rimjhim Singh

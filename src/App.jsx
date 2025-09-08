@@ -46,7 +46,6 @@ function App() {
   }, [presetId]);
 
   const intervalRef = useRef(null);
-  const beepRef = useRef(null);
   const musicRef = useRef(null);
 
   // Play/pause ambient music with timer state
@@ -55,7 +54,6 @@ function App() {
     if (!el) return;
     el.volume = 0.25;
     if (isRunning) {
-      // Play returns a promise; ignore rejections (autoplay policy handled by user click)
       el.play().catch(() => {});
     } else {
       el.pause();
@@ -70,12 +68,6 @@ function App() {
         if (prev <= 1) {
           clearInterval(intervalRef.current);
           intervalRef.current = null;
-          if (beepRef.current) {
-            try {
-              beepRef.current.currentTime = 0;
-              beepRef.current.play();
-            } catch (_) {}
-          }
           if (phase === "work") {
             setCompletedWorkSessions((n) => n + 1);
             setPhase("break");
@@ -109,12 +101,6 @@ function App() {
   function handleSkip() {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = null;
-    if (beepRef.current) {
-      try {
-        beepRef.current.currentTime = 0;
-        beepRef.current.play();
-      } catch (_) {}
-    }
     setPhase((p) => (p === "work" ? "break" : "work"));
     setIsRunning(false);
   }
@@ -146,11 +132,6 @@ function App() {
 
   return (
     <div className="app">
-      <audio
-        ref={beepRef}
-        src="https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg"
-        preload="auto"
-      />
       <audio ref={musicRef} src={musicSrc} preload="auto" loop />
 
       <header className="header">
